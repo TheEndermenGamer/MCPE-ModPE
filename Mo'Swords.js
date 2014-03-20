@@ -1,12 +1,10 @@
-//More Sword for you !!! !!
-//Based on Darking Mod (Annihilator) thanks to 49Skyfox
+//More Sword for you!!!
 //Ore sword are inspired of minevalues by tom bailey
 //Other
 var ores_sword = 36;
 var oreIds = [21, 14, 16, 15, 56];
 var oreNames = ["Lapis Lazuli", "Gold", "Coal", "Iron", "Diamond"];
 //Items
-ModPE.setItem(33,"record_11",0,"Annihilator");
 ModPE.setItem(34,"record_blocks",0,"TnT Sword");
 ModPE.setItem(69,"record_mall",0,"Flammes Sword");
 ModPE.setItem(70,"record_mellohi",0,"Heal Sword");
@@ -79,13 +77,6 @@ clientMessage(ChatColor.RED + "Mod make by @GamerEndermen");
 clientMessage(ChatColor.BLUE + "For more info visit forum link or youtube");
 }
 function attackHook(attacker,victim)
-{
-if(getCarriedItem()==33)//Annihilator
-{
-preventDefault();
-setTile(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),35,15);
-Level.destroyBlock(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),false);
-setPosition(victim,0,-100,0)
 }
 if(getCarriedItem()==34)//TnT Sword
 {
@@ -97,7 +88,7 @@ Entity.setFireTicks(victim,50);
 }
 if(getCarriedItem()==70&&Entity.getHealth(Player.getEntity()) <= 19)//Heal Sword
 {
-Player.setHealth(Entity.getHealth(Player.getEntity())+1);
+Player.setHealth(Entity.getHealth(Player.getEntity())+2);
 }
 if (getCarriedItem()==117) //Lava Sword
 {
@@ -117,7 +108,6 @@ function procCmd(cmd)
 var command = cmd.split(" ");
 if(command[0] == "swords")
 {
-addItemInventory(33,1);
 addItemInventory(34,1);
 addItemInventory(69,1);
 addItemInventory(70,1);
@@ -126,7 +116,6 @@ addItemInventory(380,1);
 addItemInventory(117,1);
 }
 }
-ModPE.addCraftRecipe(33, 1, 0, [49, 0, 49, 0, 280, 0]);
 ModPE.addCraftRecipe(34, 1, 0, [46, 0, 46, 0, 280, 0]);
 ModPE.addCraftRecipe(69, 1, 0, [369, 0, 369, 0, 280, 0]);
 ModPE.addCraftRecipe(70, 1, 0, [26, 0, 26, 0, 280, 0]);
