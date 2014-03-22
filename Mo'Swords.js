@@ -1,3 +1,5 @@
+//Mo Sword Mod By EnderGamer
+
 //Other
 
 var ores_sword = 36;
@@ -126,7 +128,6 @@ var command = cmd.split(" ");
   
 if(command[0] == "swords")
 {
-addItemInventory(33,1);
 addItemInventory(34,1);
 addItemInventory(69,1);
 addItemInventory(70,1);
