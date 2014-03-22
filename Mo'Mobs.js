@@ -1,27 +1,4 @@
-/*
-If anyone share you need to put from link
-TheEndermenGamer Script (C) GNC copyright
-TheEndermenGamer********************Script
-Copyright (C) <2014>  <TheEndermenGamer>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>
-*/
-
-//Thanks to Arjay07 and 49Skyfox and other !!!
-
-
-//If you make a video put my channel http://wWw.youtube.com/user/TheEndermenGamer
+//Script by TheEndermenGamer
 
 //Food
 
