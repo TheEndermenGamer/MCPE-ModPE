@@ -8,6 +8,11 @@ var oreIds = [21, 14, 16, 15, 56];
 
 var oreNames = ["Lapis Lazuli", "Gold", "Coal", "Iron", "Diamond"];
 
+
+//Crafts
+
+ModPE.addCraftRecipe(34, 1, 0,[46,0,46,0,280,0]);
+
 //Items
 
 ModPE.setItem(34,"record_blocks",0,"Explosive Sword");
