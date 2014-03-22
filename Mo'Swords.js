@@ -136,8 +136,3 @@ addItemInventory(117,1);
 addItemInventory(380,1);
 }
 }
-ModPE.addCraftRecipe(33, 1, 0, [49, 0, 49, 0, 280, 0]); 
-ModPE.addCraftRecipe(34, 1, 0, [46, 0, 46, 0, 280, 0]);
-ModPE.addCraftRecipe(69, 1, 0, [369, 0, 369, 0, 280, 0]);
-ModPE.addCraftRecipe(70, 1, 0, [26, 0, 26, 0, 280, 0]);
-ModPE.addCraftRecipe(72, 1, 0, [265, 0, 263, 0, 280, 0]);
