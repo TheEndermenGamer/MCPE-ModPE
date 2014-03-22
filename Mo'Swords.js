@@ -13,6 +13,13 @@ var oreNames = ["Lapis Lazuli", "Gold", "Coal", "Iron", "Diamond"];
 
 ModPE.addCraftRecipe(34, 1, 0,[46,0,46,0,280,0]);
 
+ModPE.addCraftRecipe(69, 1, 0,[51,0,51,0,280,0]);
+
+ModPE.addCraftRecipe(70, 1, 0,[355,0,355,0,280,0]);
+
+ModPE.addCraftRecipe(380, 1, 0,[49,0,49,0,280,0]);
+
+ModPE.addCraftRecipe(36, 1, 0,[265,0,266,0,280,0]);
 //Items
 
 ModPE.setItem(34,"record_blocks",0,"Explosive Sword");
