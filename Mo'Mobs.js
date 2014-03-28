@@ -18,6 +18,8 @@ ModPE.setFoodItem(419,"diamond_horse_armor",0,5,"Apple Juice");
 
 ModPE.setFoodItem(418,"gold_horse_armor",0,5,"Fried Egg");
 
+ModPE.overrideTexture("images/items-opaque.png", "http://i.imgur.com/AdUGd7H.jpg");
+
 //Spawn Eggs
 
 ModPE.setItem(399,"nether_star",0,"Apple Cow Spawn Eggs");
