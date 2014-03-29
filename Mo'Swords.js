@@ -24,11 +24,7 @@ ModPE.setItem(380,"cauldron",0,"Master Sword");
 
 ModPE.setItem(36,"record_cat",0,"Ore Sword");
 
-ModPE.overrideTexture("images/items-opaque.png", "http://i.imgur.com/AdUGd7H.jpg");
-
-//Crafts
-
-Item.addCraftRecipe(36, 1, 0, [266,1,0,280,1,0,265,1,0]);
+ModPE.overrideTexture("images/items-opaque.png", "http://i.imgur.com/ly0FrKI.png");
 
 //Code
 
@@ -91,18 +87,11 @@ clientMessage(ChatColor.GREEN + "Found " + oreNames[bestValue] + " " + bestXYZ);
 }
 function newLevel()
 {
-clientMessage(ChatColor.GREEN + "Welcome on Mo'Sword Mod' !!!");
+clientMessage(ChatColor.GREEN + "Mo'Sword Mod' !!!");
 clientMessage(ChatColor.RED + "Mod make by @GamerEndermen");
 }
 function attackHook(attacker,victim)
 {
-if(getCarriedItem()==456)//Null
-{
-preventDefault();
-setTile(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),35,15);
-Level.destroyBlock(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),false);
-setPosition(victim,0,-100,0)
-}
 if(getCarriedItem()==34)//Explosive Sword
 {
 explode(Entity.getX(victim), Entity.getY(victim), Entity.getZ(victim), 5);
