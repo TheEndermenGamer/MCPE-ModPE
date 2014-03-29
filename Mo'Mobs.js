@@ -1,4 +1,9 @@
+//Mo Mobs by TheEndermenGamer
+
 //Food
+ModPE.setFoodItem(403, "book_enchanted", 0,2, "Chocolate");
+
+ModPE.setFoodItem(491,"skull_wither", 0,7,"Chocolate Cake"); 
 
 ModPE.setFoodItem(322,"apple_golden", 0,3,"Golden Apple");
 
@@ -18,27 +23,37 @@ ModPE.setFoodItem(419,"diamond_horse_armor",0,5,"Apple Juice");
 
 ModPE.setFoodItem(418,"gold_horse_armor",0,5,"Fried Egg");
 
-ModPE.overrideTexture("images/items-opaque.png", "http://i.imgur.com/AdUGd7H.jpg");
+ModPE.setFoodItem(494,"skull_zombie",0,4,"Beef Pie");
+
+//Textures
+
+ModPE.overrideTexture("images/items-opaque.png", "http://i.imgur.com/ly0FrKI.png");
 
 //Spawn Eggs
 
-ModPE.setItem(399,"nether_star",0,"Apple Cow Spawn Eggs");
+ModPE.setItem(399,"nether_star",0,"Spawn Apple Cow");
 
-ModPE.setItem(33,"record_11",0,"Ender Cow Spawn Eggs");
+ModPE.setItem(33,"record_11",0,"Spawn Ender Cow");
 
-ModPE.setItem(372,"nether_wart",0,"Golden Cow Spawn Eggs");
+ModPE.setItem(372,"nether_wart",0,"Spawn Golden Cow");
 
-ModPE.setItem(386,"book_writable",0,"Mooshroom Spawn Eggs");
+ModPE.setItem(386,"book_writable",0,"Spawn Mooshroom");
 
-ModPE.setItem(370, "ghast_tear", 0, "Golden ApplenCow Spawn Eggs");
+ModPE.setItem(370, "ghast_tear", 0, "Golden Apple Cow Spawn Eggs");
 
-ModPE.setItem(388, "emerald", 0, "Cow Man Spawn Eggs");
+ModPE.setItem(388, "emerald", 0, "Spawn Cow Man");
 
-ModPE.setItem(371, "gold_nugget", 0, "Sheep (Modded) Spawn Eggs");
+ModPE.setItem(371, "gold_nugget", 0, "Spawn (Modded) Sheep");
 
-ModPE.setItem(375, "spider_eye", 0, "Ghost Spawn Eggs");
+ModPE.setItem(375, "spider_eye", 0, "Spawn Ghost");
 
-ModPE.setItem(374, "potion_bottle_empty", 0, "Delicious Cow Spawn Eggs");
+ModPE.setItem(374, "potion_bottle_empty", 0, "Spawn Delicious Cow");
+
+ModPE.setItem(381, "ender_eye", 0, "Spawn Creepy Cow");
+
+ModPE.setItem(378, "magma_cream", 0, "Spawn Fire Cow");
+
+ModPE.setItem(494,"skull_zombie", 0, "Spawn Milka Cow");
 
 //Items
 
@@ -48,13 +63,29 @@ ModPE.setItem(377,"blaze_powder",0,"Blaze Powder");
 
 //Craft Recipe
 
+//Chocolate Cake Craft
+
+Item.addCraftRecipe(491, 1, 0, [403,2,0,353,2,0]);
+
+//Melon Ice Cream Craft
+
 Item.addCraftRecipe(396, 1, 0, [360,1,0,79,1,0]);
+
+//Apple Pie Craft
 
 Item.addCraftRecipe(330, 1, 0, [353,1,0,260,1,0,344,1,0]);
 
+//Fire Craft
+
 Item.addCraftRecipe(51, 1, 0,[369,1,0,377,1,0]);
 
+//Apple Juice Craft
+
 Item.addCraftRecipe(419, 1, 0,[260,1,0,353,1,0]);
+
+//BeefPie Craft
+
+Item.addCraftRecipe(494, 1, 0,[364,5,0]);
 
 //All news mobs
 
@@ -66,14 +97,16 @@ var GoldenAppleCow; //Spawn
 var CowMan; //Spawn
 var Sheep; //Spawn
 var Ghost; //Spawn
-var DeliciousCow;
-var SnowCow;
-var CreepyCow;
+var DeliciousCow; //Spawn
+var SnowCow; //Spawn
+var CreepyCow; //Spawn
+var FireCow; //Spawn
+var MilkaCow; //Spawn
 
 function newLevel()
 {
-clientMessage(ChatColor.YELLOW + "Welcome on Mo'Mobs mod!!!");
-clientMessage(ChatColor.GREEN + "Mod make by @GamerEndermen");
+clientMessage(ChatColor.GREEN + "Mo'Mobs mod!!!");
+clientMessage(ChatColor.RED + "Mod make by @GamerEndermen");
 }
 function useItem(x,y,z,itemId,blockId,side) 
 { 
@@ -130,11 +163,21 @@ if(itemId==71)
 SnowCow = Level.spawnMob(x,y+1,z,11,"mob/snow_cow.png");
 Entity.setHealth(SnowCow, 20);
 }
-if(itemId==71) 
+if(itemId==381) 
 {
 CreepyCow = Level.spawnMob(x,y+1,z,33,"mob/creepy_cow.png");
 Entity.setHealth(CreepyCow, 20);
 Entity.setRenderType(CreepyCow,7);
+}
+if(itemId==378) 
+{
+FireCow = Level.spawnMob(x,y+1,z,11,"mob/Fire_Cow.png");
+Entity.setHealth(FireCow, 50);
+}
+if(itemId==494) 
+{
+MilkaCow = Level.spawnMob(x,y+1,z,11,"mob/Milka_Cow.png");
+Entity.setHealth(MilkaCow, 7);
 } 
 }
 function deathHook (attacker, victim) 
@@ -190,6 +233,14 @@ Level.dropItem(Entity.getX(victim),Entity.getY(victim), Entity.getZ(victim),1,28
 if(victim==CreepyCow) 
 {
 Level.dropItem(Entity.getX(victim),Entity.getY(victim), Entity.getZ(victim),1,46,1,0);
+}
+if(victim==FireCow) 
+{
+Level.dropItem(Entity.getX(victim),Entity.getY(victim), Entity.getZ(victim),1,51,3,0);
+}
+if(victim==MilkaCow) 
+{
+Level.dropItem(Entity.getX(victim),Entity.getY(victim), Entity.getZ(victim),1,403,2,0);
 }
 }
 function entityRemovedHook(entity)
@@ -251,7 +302,11 @@ Entity.setHealth(SnowCow, 20);
 CreepyCow = Level.spawnMob(x,y+1,z,33,"mob/creepy_cow.png");
 Entity.setHealth(CreepyCow, 20);
 Entity.setRenderType(CreepyCow,7);
-}
+FireCow = Level.spawnMob(x,y+1,z,11,"mob/Fire_Cow.png");
+Entity.setHealth(FireCow, 50);
+MilkaCow = Level.spawnMob(x,y+1,z,11,"mob/Milka_Cow.png");
+Entity.setHealth(MilkaCow, 7);
+} 
 
 var t = 7000;
 
@@ -283,21 +338,24 @@ addItemInventory(370,1);
 addItemInventory(371,1);
 addItemInventory(388,1);
 addItemInventory(375,1);
+addItemInventory(374,1);
+addItemInventory(381,1);
+addItemInventory(378,1);
 }
 }
 function attackHook(attacker, victim)
 {
 if(victim==EnderCow)
 {
-var EnderCowTeleport = Math.floor((Math.random()*5)+1);
+var EnderCowTeleport = Math.floor((Math.random()*4)+1);
 	switch(EnderCowTeleport)
 	{
 		case 1:
-		setPosition(victim, getPlayerX(),getPlayerY()+1, getPlayerZ()+9);
+		setPosition(victim, getPlayerX(),getPlayerY(), getPlayerZ()+20);
 		break;
 		
 		case 2:
-		setPosition(victim, getPlayerX(),getPlayerY()+1, getPlayerZ()-9);
+		setPosition(victim, getPlayerX(),getPlayerY(), getPlayerZ()-20);
 		break;
 	}
 }
