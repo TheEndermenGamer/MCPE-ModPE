@@ -114,7 +114,7 @@ setTile(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),8);
 }
 if (getCarriedItem()==380) //Master Sword
 {
-Entity.setHealth(victim,0);
+Entity.setHealth(victim,1);
 }
 }
 function procCmd(cmd)
