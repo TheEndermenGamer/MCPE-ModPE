@@ -24,7 +24,7 @@ ModPE.setItem(380,"cauldron",0,"Master Sword");
 
 ModPE.setItem(36,"record_cat",0,"Ore Sword");
 
-ModPE.overrideTexture("images/items-opaque.png", "http://i.imgur.com/ly0FrKI.jpg");
+ModPE.overrideTexture("images/items-opaque.png", "http://imgur.com/ly0FrKI");
 
 //Code
 
