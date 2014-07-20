@@ -2,7 +2,7 @@
 
 //Other
 
-var ores_sword = 36;
+var ores_sword = 350;
 
 var oreIds = [21, 14, 16, 15, 56];
 
@@ -22,7 +22,7 @@ ModPE.setItem(72,"record_stal",0,"Water Sword");
 
 ModPE.setItem(380,"cauldron",0,"Master Sword");
 
-ModPE.setItem(36,"record_cat",0,"Ore Sword");
+ModPE.setItem(350,"record_cat",0,"Ore Sword");
 
 ModPE.overrideTexture("images/items-opaque.png", "http://imgur.com/ly0FrKI");
 
@@ -129,6 +129,6 @@ addItemInventory(70,1);
 addItemInventory(72,1);
 addItemInventory(117,1);
 addItemInventory(380,1);
-addItemInventory(36,1);
+addItemInventory(350,1);
 }
 }
