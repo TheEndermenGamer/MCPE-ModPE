@@ -10,15 +10,15 @@ var oreNames = ["Lapis Lazuli", "Gold", "Coal", "Iron", "Diamond"];
 
 //Items
 
-ModPE.setItem(34,"record_blocks",0,"Explosive Sword");
+ModPE.setItem(476,"spider_eye",0,"Explosive Sword");
 
-ModPE.setItem(69,"record_mall",0,"Flammes Sword");
+ModPE.setItem(478,"iron_horse_armor",0,"Flamme Sword");
 
-ModPE.setItem(70,"record_mellohi",0,"Life Sword");
+ModPE.setItem(475,"diamond_horse_armor",0,"Life Sword");
 
-ModPE.setItem(117,"brewing_stand",0,"Lava Sword");
+ModPE.setItem(335,"spider_eye_fermented",0,"Lava Sword");
 
-ModPE.setItem(72,"record_stal",0,"Water Sword");
+ModPE.setItem(479,"lead",0,"Water Sword");
 
 ModPE.setItem(380,"cauldron",0,"Master Sword");
 
@@ -92,23 +92,23 @@ clientMessage(ChatColor.RED + "Mod make by @GamerEndermen");
 }
 function attackHook(attacker,victim)
 {
-if(getCarriedItem()==34)//Explosive Sword
+if(getCarriedItem()==476)//Explosive Sword
 {
 explode(Entity.getX(victim), Entity.getY(victim), Entity.getZ(victim), 5);
 }
-if(getCarriedItem()==69)//Flammes Sword
+if(getCarriedItem()==478)//Flammes Sword
 {
 Entity.setFireTicks(victim,50);
 }
-if(getCarriedItem()==70&&Entity.getHealth(Player.getEntity()) <= 19)//Heal Sword
+if(getCarriedItem()==475&&Entity.getHealth(Player.getEntity()) <= 19)//Heal Sword
 {
 Player.setHealth(Entity.getHealth(Player.getEntity())+1);
 }
-if (getCarriedItem()==117) //Lava Sword
+if (getCarriedItem()==335) //Lava Sword
 {
 setTile(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),10);
 }
-if (getCarriedItem()==72) //Water Sword
+if (getCarriedItem()==479) //Water Sword
 {
 setTile(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),8);
 }
@@ -123,12 +123,11 @@ var command = cmd.split(" ");
   
 if(command[0] == "swords")
 {
-addItemInventory(34,1);
-addItemInventory(69,1);
-addItemInventory(70,1);
-addItemInventory(72,1);
-addItemInventory(117,1);
+addItemInventory(476,1);
+addItemInventory(478,1);
+addItemInventory(475,1);
+addItemInventory(335,1);
+addItemInventory(479,1);
 addItemInventory(380,1);
-addItemInventory(350,1);
 }
 }
