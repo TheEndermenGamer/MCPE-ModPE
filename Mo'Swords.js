@@ -10,35 +10,35 @@ var oreNames = ["Lapis Lazuli", "Gold", "Coal", "Iron", "Diamond"];
 
 //Items
 
-ModPE.setItem(476,"spider_eye",0,"Explosive Sword");
+ModPE.setItem(476,"spider_eye",0,"Explosive Sword",1);
 
-ModPE.setItem(478,"iron_horse_armor",0,"Flamme Sword");
+ModPE.setItem(478,"iron_horse_armor",0,"Flamme Sword",1);
 
-ModPE.setItem(475,"diamond_horse_armor",0,"Life Sword");
+ModPE.setItem(475,"diamond_horse_armor",0,"Life Sword",1);
 
-ModPE.setItem(335,"spider_eye_fermented",0,"Lava Sword");
+ModPE.setItem(335,"spider_eye_fermented",0,"Lava Sword",1);
 
-ModPE.setItem(479,"lead",0,"Water Sword");
+ModPE.setItem(479,"lead",0,"Water Sword",1);
 
-ModPE.setItem(380,"cauldron",0,"Master Sword");
+ModPE.setItem(380,"cauldron",0,"Master Sword",1);
 
-ModPE.setItem(350,"record_cat",0,"Ore Sword");
+ModPE.setItem(350,"record_cat",0,"Ore Sword",1);
 
 //Crafts
 
-Item.addCraftRecipe(476, 1, 0,[46, 2, 0,280, 1, 0,])
+Item.addCraftRecipe(476, 1, 0, [ 0, 1, 0,46, 1, 0, 0, 1, 0, 0, 1, 0,46, 1, 0, 0, 1, 0, 0, 1, 0,280, 1, 0, 0, 1, 0]);
 
-Item.addCraftRecipe(478, 1, 0,[259, 2, 0,280, 1, 0,])
+Item.addCraftRecipe(478, 1, 0, [ 0, 1, 0,259, 1, 0, 0, 1, 0, 0, 1, 0,259, 1, 0, 0, 1, 0, 0, 1, 0,280, 1, 0, 0, 1, 0]);
 
-Item.addCraftRecipe(475, 1, 0,[26, 2, 0,280, 1, 0,])
+Item.addCraftRecipe(475, 1, 0, [ 0, 1, 0,26, 1, 0, 0, 1, 0, 0, 1, 0,26, 1, 0, 0, 1, 0, 0, 1, 0,280, 1, 0, 0, 1, 0]);
 
-Item.addCraftRecipe(335, 1, 0,[331, 2, 0,280, 1, 0,])
+Item.addCraftRecipe(335, 1, 0, [ 0, 1, 0,331, 1, 0, 0, 1, 0, 0, 1, 0,331, 1, 0, 0, 1, 0, 0, 1, 0,280, 1, 0, 0, 1, 0]);
 
-Item.addCraftRecipe(479, 1, 0,[22, 2, 0,280, 1, 0,])
+Item.addCraftRecipe(479, 1, 0, [ 0, 1, 0,22, 1, 0, 0, 1, 0, 0, 1, 0,22, 1, 0, 0, 1, 0, 0, 1, 0,280, 1, 0, 0, 1, 0]);
 
-Item.addCraftRecipe(380, 1, 0,[49, 2, 0,280, 1, 0,])
+Item.addCraftRecipe(380, 1, 0, [ 0, 1, 0,49, 1, 0, 0, 1, 0, 0, 1, 0,49, 1, 0, 0, 1, 0, 0, 1, 0,280, 1, 0, 0, 1, 0]);
 
-Item.addCraftRecipe(350, 1, 0,[265, 1, 0,266, 1, 0,280, 1, 0,])
+Item.addCraftRecipe(350, 1, 0, [ 0, 1, 0,265, 1, 0, 0, 1, 0, 0, 1, 0,265, 1, 0, 0, 1, 0, 0, 1, 0,280, 1, 0, 0, 1, 0]);
 //Code
 
 function useItem(x,y,z,itemId,blockId,side) 
@@ -100,7 +100,7 @@ clientMessage(ChatColor.GREEN + "Found " + oreNames[bestValue] + " " + bestXYZ);
 }
 function newLevel()
 {
-clientMessage(ChatColor.GREEN + "Mo'Sword Mod' !!!");
+clientMessage(ChatColor.GREEN + "Mo'Sword Mod !");
 clientMessage(ChatColor.RED + "Mod make by @GamerEndermen");
 }
 function attackHook(attacker,victim)
