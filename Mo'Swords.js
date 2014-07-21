@@ -28,7 +28,7 @@ ModPE.setItem(350,"record_cat",0,"Ore Sword");
 
 Item.addCraftRecipe(476, 1, 0,[46, 2, 0,280, 1, 0,])
 
-Item.addCraftRecipe(478, 1, 0,[51, 2, 0,280, 1, 0,])
+Item.addCraftRecipe(478, 1, 0,[259, 2, 0,280, 1, 0,])
 
 Item.addCraftRecipe(475, 1, 0,[26, 2, 0,280, 1, 0,])
 
