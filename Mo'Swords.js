@@ -24,7 +24,21 @@ ModPE.setItem(380,"cauldron",0,"Master Sword");
 
 ModPE.setItem(350,"record_cat",0,"Ore Sword");
 
+//Crafts
 
+Item.addCraftRecipe(476, 1, 0,[46, 2, 0,280, 1, 0,])
+
+Item.addCraftRecipe(478, 1, 0,[51, 2, 0,280, 1, 0,])
+
+Item.addCraftRecipe(475, 1, 0,[26, 2, 0,280, 1, 0,])
+
+Item.addCraftRecipe(335, 1, 0,[331, 2, 0,280, 1, 0,])
+
+Item.addCraftRecipe(479, 1, 0,[22, 2, 0,280, 1, 0,])
+
+Item.addCraftRecipe(380, 1, 0,[49, 2, 0,280, 1, 0,])
+
+Item.addCraftRecipe(350, 1, 0,[265, 1, 0,266, 1, 0,280, 1, 0,])
 //Code
 
 function useItem(x,y,z,itemId,blockId,side) 
@@ -127,6 +141,7 @@ addItemInventory(478,1);
 addItemInventory(475,1);
 addItemInventory(335,1);
 addItemInventory(479,1);
+addItemInventory(350,1);
 addItemInventory(380,1);
 }
 }
