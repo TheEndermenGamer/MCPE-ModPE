@@ -1,4 +1,20 @@
-//Mo Sword Mod By EnderGamer
+//More Sword Mod By EnderGamer
+
+//Creative
+
+Player.addItemCreativeInv(476,5,0);
+
+Player.addItemCreativeInv(478,5,0);
+
+Player.addItemCreativeInv(475,5,0);
+
+Player.addItemCreativeInv(335,5,0);
+
+Player.addItemCreativeInv(479,5,0);
+
+Player.addItemCreativeInv(380,5,0);
+
+Player.addItemCreativeInv(350,5,0);
 
 //Other
 
