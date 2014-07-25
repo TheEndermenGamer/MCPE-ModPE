@@ -50,9 +50,9 @@ ModPE.setFoodItem(399,"nether_star",0,7,"Chocolate Cake");
 
 //Furnace
 
-Item.addFurnaceRecipe(370,1,494); //Hot Chocolate Bowl
+Item.addFurnaceRecipe(370,494); //Hot Chocolate Bowl
 
-Item.addFurnaceRecipe(380,1,376); //Bacon
+Item.addFurnaceRecipe(380,376); //Bacon
 
 //Crafts
 
@@ -82,7 +82,7 @@ Item.addCraftRecipe(399, 1, 0, [325, 1, 1,325, 1, 1, 325, 1, 1, 351, 1, 3,344, 1
 Item.addCraftRecipe(397, 1, 0, [700,1,0,700,1,0,700,1,0,351, 1, 3,351, 1, 3,351,1,3]);
 
 //Chocolate Bowl
-Item.addCraftRecipe(370, 1, 0, [700, 1, 0,700, 1, 0,700,1,0,700,1,0,397,1,0,700,1,0,700,1,0,281,1,0,700,1,0]);
+Item.addCraftRecipe(370, 1, 0, [700, 1, 0,700, 1,0,700,1,0,700,1,0,397,1,0,700,1,0,700,1,0,281,1,0,700,1,0]);
 
 //Pancake
 Item.addCraftRecipe(369, 1, 0, [296, 1, 0,296, 1, 0, 296, 1, 0, 325, 1, 1,344, 1, 0, 325, 1, 1, 296, 1, 0,296,1,0,296,1,0]);
