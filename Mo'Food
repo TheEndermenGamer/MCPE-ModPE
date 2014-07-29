@@ -14,11 +14,18 @@ SOFTWARE.
 
 /* ******* More Food Mod By TheEndermenGamer ******* */
 
+function newLevel()
+{
+clientMessage(ChatColor.GREEN + "Mo'Foods Mod !");
+clientMessage(ChatColor.WHITE + "Mod make by " + ChatColor.LIGHT_PURPLE + "@GamerEndermen");
+}
 //Item
 
 ModPE.setItem(371,"gold_nugget",0,"Knife",1);
 
 //Food
+
+ModPE.setFoodItem(322,"apple_golden",0,15,"Golden Apple");
 
 ModPE.setFoodItem(476,"spider_eye",0,10,"Hamburger Bacon",1);
 
@@ -32,7 +39,7 @@ ModPE.setFoodItem(377,"blaze_powder",0,2,"Apple Slice");
 
 ModPE.setFoodItem(396,"carrot_golden",0,7,"Golden Carrot");
 
-ModPE.setFoodItem(385,"fireball",0,5,"French Fries");
+ModPE.setFoodItem(385,"fireball",0,3,"French Fries");
 
 ModPE.setFoodItem(370,"ghast_tear",0,3,"Chocolate Bowl");
 
@@ -54,7 +61,13 @@ Item.addFurnaceRecipe(370,494); //Hot Chocolate Bowl
 
 Item.addFurnaceRecipe(380,376); //Bacon
 
+Item.addFurnaceRecipe(295,384); //PopCorn
+
 //Crafts
+
+//Golden Apple
+
+Item.addCraftRecipe(322, 1, 0, [266, 1, 0,266, 1, 0, 266, 1, 0, 266, 1, 0,260, 1, 0, 266, 1, 0, 266, 1, 0,266,1,0,266,1,0]);
 
 //Golden Carrot
 
@@ -68,9 +81,6 @@ Item.addCraftRecipe(379, 1, 0, [700, 1, 0,391, 1, 0, 700, 1, 0, 700, 1, 0,392, 1
 
 //Bacon
 Item.addCraftRecipe(380, 3, 0, [700, 1, 0,700, 1, 0, 700, 1, 0, 700, 1, 0,319, 1, 0, 700, 1, 0, 700, 1, 0,700,1,0,700,1,0]);
-
-//Pop-Corn
-Item.addCraftRecipe(384, 1, 0, [700, 1, 0,700, 1, 0, 700, 1, 0, 700, 1, 0,295, 1, 0, 700, 1, 0, 700, 1, 0,259,1,0,700,1,0]);
 
 //French Fries
 Item.addCraftRecipe(385, 16, 0, [700, 1, 0,393, 1, 0, 700, 1, 0, 700, 1, 0,393, 1, 0, 700, 1, 0, 700, 1, 0,393,1,0,700,1,0]);
