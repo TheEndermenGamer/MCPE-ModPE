@@ -130,8 +130,8 @@ clientMessage(ChatColor.GREEN + "Found " + oreNames[bestValue] + " " + bestXYZ);
 }
 function newLevel()
 {
-clientMessage(ChatColor.GREEN + "Mo'Sword Mod' !!!");
-clientMessage(ChatColor.RED + "Mod make by @GamerEndermen");
+clientMessage(ChatColor.GREEN + "Mo'Swords Mod !");
+clientMessage(ChatColor.WHITE + "Mod make by " + ChatColor.LIGHT_PURPLE + "@GamerEndermen");
 }
 function attackHook(attacker,victim)
 {
