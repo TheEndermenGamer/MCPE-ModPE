@@ -13,7 +13,6 @@ SOFTWARE.
 */
 
 /* ******* More Food Mod By TheEndermenGamer ******* */
-
 function newLevel()
 {
 clientMessage(ChatColor.GREEN + "Mo'Foods Mod !");
@@ -29,6 +28,10 @@ ModPE.setFoodItem(322,"apple_golden",0,15,"Golden Apple");
 
 ModPE.setFoodItem(476,"spider_eye",0,10,"Hamburger Bacon",1);
 
+ModPE.setFoodItem(478,"iron_horse_armor",0,5,"Fried Egg");
+
+ModPE.setFoodItem(350,"record_cat",0,5,"Raw Sheep");
+
 ModPE.setFoodItem(376,"spider_eye_fermented",0,5,"Bacon");
 
 ModPE.setFoodItem(384,"experience_bottle",0,3,"Pop-Corn");
@@ -39,9 +42,11 @@ ModPE.setFoodItem(377,"blaze_powder",0,2,"Apple Slice");
 
 ModPE.setFoodItem(396,"carrot_golden",0,7,"Golden Carrot");
 
-ModPE.setFoodItem(385,"fireball",0,3,"French Fries");
+ModPE.setFoodItem(385,"fireball",0,2,"French Fries");
 
 ModPE.setFoodItem(370,"ghast_tear",0,3,"Chocolate Bowl");
+
+ModPE.setFoodItem(479,"lead",0,7,"Cooked Sheep");
 
 ModPE.setFoodItem(494,"skull_zombie",0,6,"Hot Chocolate Bowl"); 
 
@@ -56,6 +61,10 @@ ModPE.setFoodItem(379,"brewing_stand",0,6,"Vegetable Soup",1);
 ModPE.setFoodItem(399,"nether_star",0,7,"Chocolate Cake");
 
 //Furnace
+
+Item.addFurnaceRecipe(350,479); //Cooked Sheep
+
+Item.addFurnaceRecipe(344,478); //Fried Egg
 
 Item.addFurnaceRecipe(370,494); //Hot Chocolate Bowl
 
@@ -105,3 +114,18 @@ Item.addCraftRecipe(371, 1, 0, [700, 1, 0,265, 1, 0, 700, 1, 0, 700, 1, 0,280, 1
 
 //Cookie Cake
 Item.addCraftRecipe(372, 1, 0, [357, 1, 0,357, 1, 0, 357, 1, 0, 357, 1, 0,344, 1, 0, 357, 1, 0, 296, 1, 0,296,1,0,296,1,0]);
+
+function deathHook (attacker, victim) {
+
+if (Entity.getEntityTypeId(victim) == 13) {
+	preventDefault();
+	var random2 = Math.floor((Math.random()*5)+1);
+	if(random2 == 1) {
+	Level.dropItem(Entity.getX(victim), Entity.getY(victim), Entity.getZ(victim), 2, 350, 1, 0);
+	} else if(random2 == 2 || random2 == 3) {
+	Level.dropItem(Entity.getX(victim), Entity.getY(victim), Entity.getZ(victim), 1, 350, 1, 0);
+	}
+	}
+	}
+	
+	
