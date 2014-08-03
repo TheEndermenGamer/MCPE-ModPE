@@ -1,4 +1,8 @@
 /*
+If anyone share you need to put forum link or the link of my channel of Youtube <http://www.youtube.com/theendermengamer>
+EnderGamer Script (C) GNC copyright
+Copyright (C) <2014>  <EnderGamer>
+
 This work is licensed under the Creative Commons Attribution- NonCommercial 4.0 International License. To view a copy
 of this license, visit http://creativecommons.org/licenses/by-nc/4.0/ or send a letter to Creative Commons, 444 Castro
 Street, Suite 900, Mountain View, California, 94041, USA.
@@ -56,7 +60,14 @@ ModPE.setItem(350,"record_cat",0,"Ore Sword",1);
 
 //Crafts
 
-Item.addCraftRecipe(476, 1, 0, [ 700, 1, 0,46, 1, 0, 700, 1, 0, 700, 1, 0,46, 1, 0, 700, 1, 0, 700, 1, 0,280, 1, 0, 700, 1, 0]);
+//Explosive Swords
+Item.addShapedRecipe(476, 1, 0, [
+	" t ", 
+	" t ", 
+	" s "], [ 
+	"t", 46, 0, //specify what each character represents. b -> book, etc
+	"t", 46, 0,
+	"s", 280, 0]);
 
 Item.addCraftRecipe(478, 1, 0, [ 700, 1, 0,259, 1, 0, 700, 1, 0, 700, 1, 0,259, 1, 0, 700, 1, 0, 700, 1, 0,280, 1, 0, 700, 1, 0]);
 
