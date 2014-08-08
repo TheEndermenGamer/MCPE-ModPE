@@ -114,9 +114,9 @@ if (Entity.getEntityTypeId(victim) == 38) {
 	preventDefault();
 	var random3 = Math.floor((Math.random()*5)+1);
 	if(random3 == 1) {
-	Level.dropItem(Entity.getX(victim), Entity.getY(victim), Entity.getZ(victim), 2, 264, 1, 0);
+	Level.dropItem(Entity.getX(victim), Entity.getY(victim), Entity.getZ(victim), 2, 265, 1, 0);
 	} else if(random3 == 2 || random3 == 3) {
-	Level.dropItem(Entity.getX(victim), Entity.getY(victim), Entity.getZ(victim), 1, 264, 1, 0);
+	Level.dropItem(Entity.getX(victim), Entity.getY(victim), Entity.getZ(victim), 1, 266, 1, 0);
 	}
 }
 }
