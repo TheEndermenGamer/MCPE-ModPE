@@ -48,7 +48,7 @@ var oreNames = ["Lapis Lazuli", "Gold", "Coal", "Iron", "Diamond"];
 
 ModPE.setItem(476,"spider_eye",0,"Explosive Sword",1);
 
-ModPE.setItem(414,"record_cat",0,"Bouncing Sword",1);
+ModPE.setItem(410,"record_11",0,"Bouncing Sword",1);
 
 ModPE.setItem(478,"iron_horse_armor",0,"Flamme Sword",1);
 
