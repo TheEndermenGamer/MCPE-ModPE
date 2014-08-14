@@ -34,7 +34,7 @@ Player.addItemCreativeInv(380,1,0);
 
 Player.addItemCreativeInv(350,1,0);
 
-Player.addItemCreativeInv(414,1,0);
+Player.addItemCreativeInv(410,1,0);
 
 //Other
 
@@ -191,6 +191,6 @@ addItemInventory(335,1);
 addItemInventory(479,1);
 addItemInventory(350,1);
 addItemInventory(380,1);
-addItemInventory(314,1);
+addItemInventory(410,1);
 }
 }
