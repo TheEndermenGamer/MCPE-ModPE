@@ -170,10 +170,10 @@ if (getCarriedItem()==380) //Master Sword
 {
 Entity.setHealth(victim,1);
 }
-if(Player.getCarriedItem()==414)
+if(Player.getCarriedItem()==410)
 {
 preventDefault();
-Entity.setVelY(victim,6);
+Entity.setVelY(victim,3);
 setTile(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),155,0);
 Level.destroyBlock(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),false);
 }
