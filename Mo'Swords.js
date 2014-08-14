@@ -34,6 +34,8 @@ Player.addItemCreativeInv(380,1,0);
 
 Player.addItemCreativeInv(350,1,0);
 
+Player.addItemCreativeInv(414,1,0);
+
 //Other
 
 var ores_sword = 350;
@@ -45,6 +47,8 @@ var oreNames = ["Lapis Lazuli", "Gold", "Coal", "Iron", "Diamond"];
 //Items
 
 ModPE.setItem(476,"spider_eye",0,"Explosive Sword",1);
+
+ModPE.setItem(414,"record_cat",0,"Bouncing Sword",1);
 
 ModPE.setItem(478,"iron_horse_armor",0,"Flamme Sword",1);
 
@@ -60,14 +64,9 @@ ModPE.setItem(350,"record_cat",0,"Ore Sword",1);
 
 //Crafts
 
-//Explosive Swords
-Item.addShapedRecipe(476, 1, 0, [
-	" t ", 
-	" t ", 
-	" s "], [ 
-	"t", 46, 0, //specify what each character represents. b -> book, etc
-	"t", 46, 0,
-	"s", 280, 0]);
+Item.addCraftRecipe(414, 1, 0, [ 700, 1, 0,287, 1, 0, 700, 1, 0, 700, 1, 0,287, 1, 0, 700, 1, 0, 700, 1, 0,280, 1, 0, 700, 1, 0]);
+
+Item.addCraftRecipe(476, 1, 0, [ 700, 1, 0,46, 1, 0, 700, 1, 0, 700, 1, 0,46, 1, 0, 700, 1, 0, 700, 1, 0,280, 1, 0, 700, 1, 0]);
 
 Item.addCraftRecipe(478, 1, 0, [ 700, 1, 0,259, 1, 0, 700, 1, 0, 700, 1, 0,259, 1, 0, 700, 1, 0, 700, 1, 0,280, 1, 0, 700, 1, 0]);
 
@@ -149,10 +148,11 @@ function attackHook(attacker,victim)
 if(getCarriedItem()==476)//Explosive Sword
 {
 explode(Entity.getX(victim), Entity.getY(victim), Entity.getZ(victim), 5);
+Player.setHealth(20);
 }
 if(getCarriedItem()==478)//Flammes Sword
 {
-Entity.setFireTicks(victim,50);
+Entity.setFireTicks(victim,10);
 }
 if(getCarriedItem()==475&&Entity.getHealth(Player.getEntity()) <= 19)//Heal Sword
 {
@@ -170,6 +170,13 @@ if (getCarriedItem()==380) //Master Sword
 {
 Entity.setHealth(victim,1);
 }
+if(Player.getCarriedItem()==414)
+{
+preventDefault();
+Entity.setVelY(victim,1.5);
+setTile(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),155,0);
+Level.destroyBlock(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),false);
+}
 }
 function procCmd(cmd)
 {
@@ -184,5 +191,6 @@ addItemInventory(335,1);
 addItemInventory(479,1);
 addItemInventory(350,1);
 addItemInventory(380,1);
+addItemInventory(314,1);
 }
 }
