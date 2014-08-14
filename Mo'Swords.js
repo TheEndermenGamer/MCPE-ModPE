@@ -173,7 +173,7 @@ Entity.setHealth(victim,1);
 if(Player.getCarriedItem()==414)
 {
 preventDefault();
-Entity.setVelY(victim,1.5);
+Entity.setVelY(victim,6);
 setTile(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),155,0);
 Level.destroyBlock(Entity.getX(victim),Entity.getY(victim)+1,Entity.getZ(victim),false);
 }
